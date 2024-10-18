@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DESI STORE - Electronics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">DESI STORE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Welcome to DESI STORE</h1>
+        <p>Your One-Stop Shop for Electronics</p>
+        <a href="#" class="shop-now-btn">Shop Now</a>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Electronics</h2>
+        <div class="product-container">
+            <div class="product-card" onclick="openModal('modal1')">
+                <img src="alex-knight-j4uuKnN43_M-unsplash.jpg" alt="Laptop">
+                <h3>High-Performance Laptop</h3>
+                <p>$799.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" onclick="openModal('modal2')">
+                <img src="denny-ryanto-CjUlnvc33YM-unsplash.jpg" alt="Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>$499.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" onclick="openModal('modal3')">
+                <img src="jens-kreuter-PKnn-nXCNhs-unsplash.jpg" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>$199.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Specifications -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <h2>High-Performance Laptop</h2>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Processor: Intel Core i7</li>
+                <li>RAM: 16GB DDR4</li>
+                <li>Storage: 512GB SSD</li>
+                <li>Graphics: NVIDIA GTX 1650</li>
+                <li>Display: 15.6-inch Full HD</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <h2>Latest Smartphone</h2>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Processor: Snapdragon 888</li>
+                <li>RAM: 8GB</li>
+                <li>Storage: 128GB</li>
+                <li>Camera: 48MP Triple Camera</li>
+                <li>Battery: 4500mAh</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <h2>Smart Watch</h2>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Display: 1.4-inch AMOLED</li>
+                <li>Battery Life: Up to 7 Days</li>
+                <li>Water Resistance: 5 ATM</li>
+                <li>Connectivity: Bluetooth, GPS</li>
+                <li>Health Features: Heart Rate Monitor, Sleep Tracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 DESI STORE. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when user clicks outside of modal content
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
